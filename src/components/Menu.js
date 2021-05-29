@@ -6,9 +6,9 @@ function Menu() {
             <hr />
             <ul>
                 <li><a href="/mypage">マイページ</a></li>
-                <li>新規先祖登録</li>
-                <li>先祖オールスター</li>
-                <li>なむログ</li>
+                <li><a href="/regi">新規先祖登録</a></li>
+                <li><a href="/list">先祖オールスター</a></li>
+                <li><a href="/log">なむログ</a></li>
             </ul>
         </div>
     )

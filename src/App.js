@@ -3,6 +3,7 @@ import React, { useState, useEffect }from 'react';
 import { db, auth } from './firebase'
 import FamilyList from './components/FamilyList';
 import Menu from './components/Menu';
+import Logout from './components/Logout';
 
 function App(props) {
   useEffect(() => {
@@ -14,23 +15,12 @@ function App(props) {
 
   return (
     <div>
-      <FamilyList />
+      <p>ここがtopページだよ</p>
+      <p>仏壇背景で、登録した人の写真が並んでます</p>
+
       <Menu />
-  
-      {/* ログアウト用のボタン */}
-      <button
-        onClick={
-          async() => {
-            try {
-              await auth.signOut();
-              props.history.push("login");
-            } catch (error) {
-              alert(error.message);
-            }
-          }
-        }
-     
-     >ログアウト</button>
+      <Logout />
+      
     </div>
   );
 }

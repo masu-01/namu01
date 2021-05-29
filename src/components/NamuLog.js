@@ -4,7 +4,7 @@ import Home from './Home';
 import Logout from './Logout';
 import Menu from './Menu';
 
-const FamilyRegister = (props) => {
+const NamuLog = (props) => {
     useEffect(() => {
         const unSub = auth.onAuthStateChanged((user) => {
           !user && props.history.push("login");
@@ -14,7 +14,7 @@ const FamilyRegister = (props) => {
 
     return (
         <div>
-            登録画面
+            なむログのページ
 
             <Menu />
             <Logout />
@@ -23,4 +23,4 @@ const FamilyRegister = (props) => {
     )
 }
 
-export default FamilyRegister
+export default NamuLog

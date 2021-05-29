@@ -1,5 +1,8 @@
 import React, { useState, useEffect }from 'react';
 import { db, auth } from '../firebase'
+import Home from './Home';
+import Logout from './Logout';
+import Menu from './Menu';
 
 const FamilyList = (props) => {
     useEffect(() => {
@@ -12,8 +15,14 @@ const FamilyList = (props) => {
       return (
         <div>
             家族のリスト
-        </div>
+
+            <Menu />
+            <Logout />
+            <Home />
+    </div>
       );
+
+      
 
 }
 
