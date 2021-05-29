@@ -4,7 +4,9 @@ import App from './App';
 import { Route, BrowserRouter } from "react-router-dom";
 import Login from './components/Login';
 import FamilyList from './components/FamilyList';
-import Register from './components/Register';
+import Register from './components/FamilyRegister';
+import Mypage from './components/Mypage';
+
 
 
 ReactDOM.render(
@@ -19,6 +21,7 @@ ReactDOM.render(
     <Route exact path="/list" component={FamilyList} />
 
     <Route exact path="/regi" component={Register} />
+    <Route exact path="/mypage" component={Mypage} />
 
   </BrowserRouter>,
   document.getElementById('root')
