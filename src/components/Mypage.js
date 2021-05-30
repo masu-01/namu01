@@ -14,7 +14,9 @@ const Mypage = (props) => {
 
     return (
         <div>
-            マイページだよ
+            マイページだよ<br />
+            <h1>マイページいらない説ある</h1>
+            パスワード変更とかは諦めることにしよう
 
             <Menu />
             <Logout />

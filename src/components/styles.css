@@ -51,6 +51,14 @@ body {
     height: auto;
   }
 
+  .top-bgi{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .top-bgi img{
+    height: 600px;
+  }
 
   /* .incomplete-area {
     background-color: #c6ffe2;

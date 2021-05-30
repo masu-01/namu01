@@ -7,9 +7,9 @@ import FamilyList from './components/FamilyList';
 import FamilyRegister from './components/FamilyRegister';
 import Mypage from './components/Mypage';
 import NamuLog from './components/NamuLog';
-import FamilyRegisterTest from './components/FamilyRegister copy';
-
-
+import NamuItemChoice from './components/NamuItemChoice';
+import Edit from './components/Edit';
+import NamuItemtCheck from './components/NamuItemtCheck';
 
 
 ReactDOM.render(
@@ -24,11 +24,13 @@ ReactDOM.render(
     <Route exact path="/list" component={FamilyList} /> 
 
 
-    <Route exact path="/regi" component={FamilyRegisterTest} />
+    <Route exact path="/regi" component={FamilyRegister} />
     {/* <Route exact path="/regi" component={FamilyRegister} /> */}
     <Route exact path="/mypage" component={Mypage} />
     <Route exact path="/log" component={NamuLog} />
-
+    <Route exact path="/namu-choice" component={NamuItemChoice} />
+    <Route exact path="/edit" component={Edit} />
+    <Route exact path="/check" component={NamuItemtCheck} />
 
 
   </BrowserRouter>,
