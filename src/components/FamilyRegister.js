@@ -62,7 +62,7 @@ const FamilyRegister = (props) => {
     console.log(inputImage);
 
     // formタグを使うと送信の際にリフレッシュされます（画面がリロードされるということ）
-    // formタグを使う時は必須！絶対入ります！
+    // リフレッシュされないのですが！！
     e.preventDefault();
 
     if (inputImage) {
@@ -132,7 +132,7 @@ const FamilyRegister = (props) => {
         // ここに登録完了の処理を書くのかな？？
         // どういう処理？「登録完了しました」で入力した内容を表示する
         // これやると登録できない（泣）
-        // alert("登録完了しました")
+        alert("登録完了しました")
     };
 
         // ページが表示されるときにuseEffectを使ってfirebaseのデータにアクセスする
