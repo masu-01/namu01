@@ -1,5 +1,6 @@
 import React, { useState, useEffect }from 'react';
-import { db, auth } from '../firebase'
+import firebase from "firebase/app";
+import { db, auth, storage } from '../firebase'
 import "./styles.css";
 import Home from './Home';
 import Logout from './Logout';
@@ -26,7 +27,18 @@ const FamilyRegister = (props) => {
         const [inputValueName, setInputValueName] = useState("");
         const [inputValueBirthday, setInputValueBirthday] = useState("");
         const [inputValueRelationship, setInputValueRelationship] = useState("");
+        const [inputImage, setInputImage] = useState(null);     // これは画像
 
+        // ファイル選択→画像を選ぶ　画像を保持する
+        const onChangeImageHandler = (e) => {
+            if (e.target.files[0]) {
+            console.log(e.target.files[0], "画像");
+            // 画像
+            setInputImage(e.target.files[0]);
+            // 入力部分をからにする
+            e.target.value = "";
+            }
+        };
 
         // inputタグのイベント処理
         // onchangeで「handleInputChange」という関数を使う
@@ -44,6 +56,9 @@ const FamilyRegister = (props) => {
 
         // 登録ボタンのイベント処理
         const addInputData = (e) => {
+
+
+            
             // インプットのvalueをdbに送って
             db.collection("group").add({
             name:inputValueName,
@@ -56,6 +71,10 @@ const FamilyRegister = (props) => {
             setInputValueName("");
             setInputValueBirthday(""); 
             setInputValueRelationship("");
+
+            // ここに登録完了の処理を書くのかな？？
+            // どういう処理？「登録完了しました」で入力した内容を表示する
+            alert("登録完了しました")
         }
 
 

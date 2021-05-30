@@ -40,12 +40,18 @@ body {
   .input-area {
     background-color: pink;
     width: 700px;
-    height: 120px;
+    height: 180px;
     padding: 8px;
     margin: 8px;
     border-radius: 8px;
   }
   
+  .photo {
+    width: 60px;
+    height: auto;
+  }
+
+
   /* .incomplete-area {
     background-color: #c6ffe2;
     width: 400px;
@@ -102,6 +108,16 @@ body {
     width:130px;
   }
   
+  .changeButton {
+    color: #fff;
+    background-color: #eb6100;
+    width: 400px;
+    border-radius: 16px;
+    padding: 10px,20px;
+    text-align: center;
+  }
+
+
   /* .contents {
     margin-right: 8px;
   } */

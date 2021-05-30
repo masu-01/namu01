@@ -23,6 +23,7 @@ const FamilyList = (props) => {
             id:"",
             name:"",
             relation:"",
+            image:"",
             },
         ]);
 
@@ -36,6 +37,7 @@ const FamilyList = (props) => {
                 name: dbData.data().name,
                 birthday: dbData.data().birthday,
                 relation: dbData.data().relation,
+                image: dbData.data().image,
                 }))
             );
             });
@@ -61,7 +63,7 @@ const FamilyList = (props) => {
                 </ul>
 
                 {data.map((data) => (
-                <FamilyItem id={data.id} name={data.name} birthday={data.birthday} relation={data.relation} />
+                <FamilyItem id={data.id} name={data.name} birthday={data.birthday} relation={data.relation} image={data.image} />
                 ))}
 
             </div>

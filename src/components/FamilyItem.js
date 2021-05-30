@@ -18,9 +18,7 @@ const useStyles = makeStyles(() => (
     })
 ))
 
-const FamilyItem = ({id, name, birthday, relation}) => {
-
-
+const FamilyItem = ({id, name, birthday, relation, image}) => {
     const classes = useStyles();
 
     const deleteInputData = () => {
@@ -34,6 +32,7 @@ const FamilyItem = ({id, name, birthday, relation}) => {
                     <span className="span-head01">{name}</span>
                     <span className="span-head04">{relation}</span>
                     <span className="span-head02">{birthday}</span>
+                    <span><img className="photo" src={image} alt="" /></span>
                     <span className="span-head03"><button onClick={deleteInputData}>削除</button></span>
                     {/* <Button className={classes.button} >あああ</Button> */}
                     {/* <Button colorScheme="blue">Button</Button> */}

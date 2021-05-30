@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { auth } from "../firebase";
+import "./styles.css";
+
 
 const Login = (props) => {
     // ログイン状態の保持
@@ -29,7 +31,7 @@ const Login = (props) => {
         <div>
             {/*  */}
             <h1>
-                {isLogin ? "Login" : "Register"}
+                {isLogin ? "ログインしてください" : "登録してください"}
             </h1>
 
             <hr />
@@ -82,8 +84,8 @@ const Login = (props) => {
             <hr />
             {/* 最初はisLoginがtrue担ってしまって「ログインする」になってしまうので */}
             {/* ここでisLoginを切り替えるonClickを作成する */}
-            <div onClick={()=> setIsLogin(!isLogin)}>
-                {isLogin ? "アカウントを作成する" : "ログインする"}
+            <div onClick={()=> setIsLogin(!isLogin)} className="changeButton">
+                {isLogin ? "アカウントがない人はここを押して" : "アカウントお持ちの方はこちら"}
             </div>
 
         </div>
